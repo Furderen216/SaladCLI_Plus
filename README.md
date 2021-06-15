@@ -130,7 +130,7 @@
 ###### Other issues / Bugs.
 - Join the [Support Discord Server](https://discord.gg/D2VBbJDz8c)
 
-this commit should now be verified sus (actually now)
+aaa
 
 
 
