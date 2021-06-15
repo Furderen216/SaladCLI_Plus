@@ -13,10 +13,10 @@ os.system('cls')
 
 sys.stdout.write("\x1b]2;Choose mining region.\x07")
 
-print(Fore.GREEN + logo)
+print(Fore.LIGHTBLACK_EX + logo)
 
 select_pool = input(
-    f"{Fore.CYAN}Select a pool: \n\n{Fore.YELLOW}1 - {Fore.CYAN}Nicehash \n{Fore.YELLOW}2 - {Fore.CYAN}Ethermine \n\n{Fore.YELLOW}Type {Fore.RED}exit {Fore.YELLOW}to exit.\n\n{Fore.GREEN}Select {Fore.BLUE}>> {Fore.GREEN}"
+    f"{Fore.CYAN}Select a pool: \n\n{Fore.RED}1 - {Fore.CYAN}Nicehash \n{Fore.RED}2 - {Fore.CYAN}Ethermine \n\n{Fore.RED}Type {Fore.CYAN}exit {Fore.RED}to exit.\n\n{Fore.LIGHTBLACK_EX}Select {Fore.BLUE}>> {Fore.LIGHTBLACK_EX}"
 )
 
 if select_pool == "1":
@@ -25,10 +25,10 @@ if select_pool == "1":
 
     sys.stdout.write("\x1b]2;Choose mining region.\x07")
 
-    print(Fore.GREEN + logo)
+    print(Fore.LIGHTBLACK_EX + logo)
 
     select_region = input(
-        f"{Fore.CYAN}Select a pool region: \n\n{Fore.YELLOW}1 - {Fore.CYAN}EU-West \n{Fore.YELLOW}2 - {Fore.CYAN}EU-North \n{Fore.YELLOW}3 - {Fore.CYAN}USA-West \n{Fore.YELLOW}4 - {Fore.CYAN}USA-East \n\n{Fore.YELLOW}Type {Fore.RED}exit {Fore.YELLOW}to exit.\n\n{Fore.GREEN}Select {Fore.BLUE}>> {Fore.GREEN}"
+        f"{Fore.CYAN}Select a pool region: \n\n{Fore.RED}1 - {Fore.CYAN}EU-West \n{Fore.RED}2 - {Fore.CYAN}EU-North \n{Fore.RED}3 - {Fore.CYAN}USA-West \n{Fore.RED}4 - {Fore.CYAN}USA-East \n\n{Fore.RED}Type {Fore.CYAN}exit {Fore.RED}to exit.\n\n{Fore.LIGHTBLACK_EX}Select {Fore.BLUE}>> {Fore.LIGHTBLACK_EX}"
     )
 
     if select_region == "1":
@@ -49,23 +49,23 @@ if select_pool == "1":
     # Additional miner commands
 
     os.system("cls")
-    print(Fore.GREEN + logo)
+    print(Fore.LIGHTBLACK_EX + logo)
 
     miner_commands = input(
-        f"{Fore.CYAN}Type additional miner commands here (optional) \nPress enter to skip. \n\n{Fore.GREEN}Select {Fore.BLUE}>> {Fore.GREEN}"
+        f"{Fore.CYAN}Type additional miner commands here (optional) \nPress enter to skip. \n\n{Fore.LIGHTBLACK_EX}Select {Fore.BLUE}>> {Fore.LIGHTBLACK_EX}"
     )
 
     # Select miner
 
     os.system("cls")
-    print(Fore.GREEN + logo)
+    print(Fore.LIGHTBLACK_EX + logo)
 
     with open('config.json') as f:
         js = json.load(f)
     nicehash_wallet = js['nicehash_wallet']
 
     select = input(
-        f"{Fore.YELLOW}Miners are listed from 'best' to 'worst'.\n\n{Fore.BLACK}{Back.CYAN}Cyan{Back.BLACK}{Fore.YELLOW} = GPU Miner\n{Fore.BLACK}{Back.GREEN}Green{Back.BLACK}{Fore.YELLOW} = CPU Miner\n\n\n{Fore.CYAN}Select a miner: \n\n{Fore.YELLOW}{Fore.YELLOW}1 - {Fore.CYAN}T-rex (Ethash) \n{Fore.YELLOW}2 - {Fore.CYAN}NBMiner (Ethash) \n{Fore.YELLOW}3 - {Fore.CYAN}Phoenixminer (Ethash) \n{Fore.YELLOW}4 - {Fore.CYAN}ETHMiner (Ethash) \n{Fore.YELLOW}5 - {Fore.CYAN}Gminer (BeamhashIII) \n{Fore.YELLOW}6 - {Fore.CYAN}T-rex (KawPow) \n{Fore.YELLOW}7 - {Fore.CYAN}XMRig nVidia (KawPow) \n{Fore.YELLOW}8 - {Fore.CYAN}XMRig AMD (KawPow) \n{Fore.YELLOW}9 - {Fore.CYAN}Gminer (Zhash) \n{Fore.YELLOW}10 - {Fore.GREEN}XMRig (RandomXMonero)\n\n{Fore.YELLOW}Type {Fore.RED}exit {Fore.YELLOW}to exit.\n\n{Fore.GREEN}Select {Fore.BLUE}>> {Fore.GREEN}")
+        f"{Fore.RED}Miners are listed from 'best' to 'worst'.\n\n{Fore.BLACK}{Back.CYAN}Cyan{Back.BLACK}{Fore.RED} = GPU Miner\n{Fore.BLACK}{Back.GREEN}Green{Back.BLACK}{Fore.RED} = CPU Miner\n\n\n{Fore.CYAN}Select a miner: \n\n{Fore.RED}{Fore.RED}1 - {Fore.CYAN}T-rex (Ethash) \n{Fore.RED}2 - {Fore.CYAN}NBMiner (Ethash) \n{Fore.RED}3 - {Fore.CYAN}Phoenixminer (Ethash) \n{Fore.RED}4 - {Fore.CYAN}ETHMiner (Ethash) \n{Fore.RED}5 - {Fore.CYAN}Gminer (BeamhashIII) \n{Fore.RED}6 - {Fore.CYAN}T-rex (KawPow) \n{Fore.RED}7 - {Fore.CYAN}XMRig nVidia (KawPow) \n{Fore.RED}8 - {Fore.CYAN}XMRig AMD (KawPow) \n{Fore.RED}9 - {Fore.CYAN}Gminer (Zhash) \n{Fore.RED}10 - {Fore.LIGHTBLACK_EX}XMRig (RandomXMonero)\n\n{Fore.RED}Type {Fore.CYAN}exit {Fore.RED}to exit.\n\n{Fore.LIGHTBLACK_EX}Select {Fore.BLUE}>> {Fore.LIGHTBLACK_EX}")
 
     if select == "1":
         os.system("OptimizeGPU.bat")
@@ -99,12 +99,12 @@ if select_pool == "1":
 
     if select == "7":
         os.system("OptimizeGPU.bat")
-        os.system(r"Miners\XMRig-6.7.0\xmrig.exe --no-cpu --cuda -a kawpow -o stratum+tcp://kawpow." + region + ".nicehash.com:3385 -u " +
+        os.system(r"Miners\XMRig-Cuda\xmrig.exe --no-cpu --cuda -a kawpow -o stratum+tcp://kawpow." + region + ".nicehash.com:3385 -u " +
                   (nicehash_wallet) + r" -k --nicehash" + " " + (miner_commands))
 
     if select == "8":
         os.system("OptimizeGPU.bat")
-        os.system(r"Miners\XMRig-amd-2.14.6\xmrig-amd.exe --donate-level=1 -a kawpow -o stratum+tcp://kawpow." + region + ".nicehash.com:3385 -u " +
+        os.system(r"Miners\XMRig-amd\xmrig-amd.exe --donate-level=1 -a kawpow -o stratum+tcp://kawpow." + region + ".nicehash.com:3385 -u " +
                   (nicehash_wallet) + r" -k --nicehash" + " " + (miner_commands))
 
     if select == "9":
@@ -114,7 +114,7 @@ if select_pool == "1":
 
     if select == "10":
         os.system("cls")
-        os.system(r"Miners\XMRig-CPU-6.7.0\xmrig.exe --donate-level=1 -o stratum+tcp://randomxmonero." + region + ".nicehash.com:3380 --coin=monero -u " +
+        os.system(r"Miners\XMRig-CPU\xmrig.exe --donate-level=1 -o stratum+tcp://randomxmonero." + region + ".nicehash.com:3380 --coin=monero -u " +
                   (nicehash_wallet) + r" -k --nicehash" + " " + (miner_commands))
 
     if select == "exit":
@@ -129,10 +129,10 @@ if select_pool == "2":
 
     sys.stdout.write("\x1b]2;Choose mining region.\x07")
 
-    print(Fore.GREEN + logo)
+    print(Fore.LIGHTBLACK_EX + logo)
 
     select_region = input(
-        f"{Fore.CYAN}Select a pool region: \n\n{Fore.YELLOW}1 - {Fore.CYAN}Europe \n{Fore.YELLOW}2 - {Fore.CYAN}Asia \n{Fore.YELLOW}3 - {Fore.CYAN}USA-West \n{Fore.YELLOW}4 - {Fore.CYAN}USA-East \n\n{Fore.YELLOW}Type {Fore.RED}exit {Fore.YELLOW}to exit.\n\n{Fore.GREEN}Select {Fore.BLUE}>> {Fore.GREEN}"
+        f"{Fore.CYAN}Select a pool region: \n\n{Fore.RED}1 - {Fore.CYAN}Europe \n{Fore.RED}2 - {Fore.CYAN}Asia \n{Fore.RED}3 - {Fore.CYAN}USA-West \n{Fore.RED}4 - {Fore.CYAN}USA-East \n\n{Fore.RED}Type {Fore.CYAN}exit {Fore.RED}to exit.\n\n{Fore.LIGHTBLACK_EX}Select {Fore.BLUE}>> {Fore.LIGHTBLACK_EX}"
     )
 
     if select_region == "1":
@@ -153,23 +153,23 @@ if select_pool == "2":
     # Additional miner commands
 
     os.system("cls")
-    print(Fore.GREEN + logo)
+    print(Fore.LIGHTBLACK_EX + logo)
 
     miner_commands = input(
-        f"{Fore.CYAN}Type additional miner commands here (optional) \nPress enter to skip. \n\n{Fore.GREEN}Select {Fore.BLUE}>> {Fore.GREEN}"
+        f"{Fore.CYAN}Type additional miner commands here (optional) \nPress enter to skip. \n\n{Fore.LIGHTBLACK_EX}Select {Fore.BLUE}>> {Fore.LIGHTBLACK_EX}"
     )
 
     # Select miner
 
     os.system("cls")
-    print(Fore.GREEN + logo)
+    print(Fore.LIGHTBLACK_EX + logo)
 
     with open('config.json') as f:
         js = json.load(f)
     ethermine_wallet = js['ethermine_wallet']
 
     select = input(
-        f"{Fore.YELLOW}Miners are listed from 'best' to 'worst'.\n\n\n{Fore.CYAN}Select a miner: \n\n{Fore.YELLOW}{Fore.YELLOW}1 - {Fore.CYAN}T-rex (Ethash) \n{Fore.YELLOW}2 - {Fore.CYAN}NBMiner (Ethash) \n{Fore.YELLOW}3 - {Fore.CYAN}Phoenixminer (Ethash) \n{Fore.YELLOW}4 - {Fore.CYAN}ETHMiner (Ethash) \n\n{Fore.YELLOW}Type {Fore.RED}exit {Fore.YELLOW}to exit.\n\n{Fore.GREEN}Select {Fore.BLUE}>> {Fore.GREEN}")
+        f"{Fore.RED}Miners are listed from 'best' to 'worst'.\n\n\n{Fore.CYAN}Select a miner: \n\n{Fore.RED}{Fore.RED}1 - {Fore.CYAN}T-rex (Ethash) \n{Fore.RED}2 - {Fore.CYAN}NBMiner (Ethash) \n{Fore.RED}3 - {Fore.CYAN}Phoenixminer (Ethash) \n{Fore.RED}4 - {Fore.CYAN}ETHMiner (Ethash) \n\n{Fore.RED}Type {Fore.CYAN}exit {Fore.RED}to exit.\n\n{Fore.LIGHTBLACK_EX}Select {Fore.BLUE}>> {Fore.LIGHTBLACK_EX}")
 
     if select == "1":
         os.system("OptimizeGPU.bat")

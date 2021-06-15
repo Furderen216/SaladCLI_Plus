@@ -10,6 +10,8 @@ import argparse
 from time import sleep
 from colorama import Fore, Back
 
+os.system('cls')
+
 # This very epic thing is made by SharkOfGod!
 
 sys.stdout.write("\x1b]2;Earning History\x07")
@@ -164,22 +166,22 @@ if color:
 with open('./Art/art.txt', encoding='utf-8') as f:
     art = f.read()
 
-color = '0A'
+color = '08'
 os.system('color ' + color)
 
 print(art)
 
 if not goose:
 
-    print(f'{Fore.LIGHTRED_EX}Total Earned Today {Fore.BLUE}> {Fore.YELLOW}$' + str(total))
-    print(Fore.GREEN)
+    print(f'{Fore.CYAN}Total Earned Today {Fore.BLUE}> {Fore.RED}$' + str(total))
+    print(Fore.LIGHTBLACK_EX)
     print('-------------------------------------')
-    print(f'\n{Fore.GREEN}Press {Fore.RED}ctrl+c {Fore.GREEN}to Return to the menu!')
+    print(f'\n{Fore.LIGHTBLACK_EX}Press {Fore.CYAN}ctrl+c {Fore.LIGHTBLACK_EX}to Return to the menu!')
 
 else:
 
-    print(f'{Fore.LIGHTRED_EX}Total Earned Today {Fore.BLUE}> {Fore.YELLOW}$' + str(total))
-    print(Fore.GREEN)
+    print(f'{Fore.CYAN}Total Earned Today {Fore.BLUE}> {Fore.RED}$' + str(total))
+    print(Fore.LIGHTBLACK_EX)
     print('-------------------------------------')
     print()
 
@@ -290,9 +292,9 @@ else:
                             text = text + '  '
                             positions[k] = False
             print(text)
-    print(Fore.GREEN)
+    print(Fore.LIGHTBLACK_EX)
     print('-------------------------------------')
-    print(f'\n{Fore.GREEN}Press {Fore.RED}ctrl+c {Fore.GREEN}to Return to the menu!')
+    print(f'\n{Fore.LIGHTBLACK_EX}Press {Fore.CYAN}ctrl+c {Fore.LIGHTBLACK_EX}to Return to the menu!')
 
 while True:
     try:
