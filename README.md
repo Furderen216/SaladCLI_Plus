@@ -12,8 +12,6 @@
 
 <!-- End Badges -->
 
-## Salad CLI+ Will not be updated anymore, and won't get any more support.
-
 ---
 
 > Salad CLI+ uses your AUTH code to view your balance, lifetime balance, xp and referral code using the Salad API. Devs can not see your code.
