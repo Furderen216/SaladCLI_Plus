@@ -130,7 +130,4 @@
 ###### Other issues / Bugs.
 - Join the [Support Discord Server](https://discord.gg/D2VBbJDz8c)
 
-verify worky?
-
-
 
