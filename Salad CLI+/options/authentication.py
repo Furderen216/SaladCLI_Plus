@@ -1,8 +1,19 @@
-﻿import requests
-from colorama import Fore
-import json
+﻿import json
 import logging
 from time import sleep
+import os
+
+try:
+    from time import sleep
+    from colorama import Fore, Back
+    import pyperclip
+    import requests
+    import dateutil.parser
+except ImportError:
+    print("One or more Modules not found. Press enter to install! After installing please restart Salad CLI+")
+    input()
+    os.system("pip install -r ./Options/requirements.txt")
+    exit()
 
 
 def get_auth_key():
