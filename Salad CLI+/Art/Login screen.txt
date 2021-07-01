@@ -1,20 +1,12 @@
-                     .
-                  `:sh               
-               `+hNNNm      `        
-                .+hNNm      hdo-     
-                   `:o`     hNNNms.  
-                     .hy+-  hNms/`   
-              ..     .hhhhhs+-       
-           -+yh/     .hddmNN:        
-         -shhhh/     `smNNNN:    --  
-           `:oh/ ``...  -+hN:`:ohho  
-              `::.....    .+/ohhhho  
-           `...:oo+:-.`:ohhh:..:+yo  
-          ``...:ooo+:-syhhhh:...```  
-             ``:/:....oooosy:``      
-                 `....oo+/-`         
-                    `.:.`    
-   
-             WELCOME TO SALAD CLI+
 
-          
+
+ __      __       .__                               
+/  \    /  \ ____ |  |   ____  ____   _____   ____  
+\   \/\/   // __ \|  | _/ ___\/  _ \ /     \_/ __ \ 
+ \        /\  ___/|  |_\  \__(  <_> )  Y Y  \  ___/ 
+  \__/\  /  \___  >____/\___  >____/|__|_|  /\___  >
+       \/       \/          \/            \/     \/ 
+
+Salad CLI+ made by Walkx | Licensed under AGPL-3.0 License
+
+

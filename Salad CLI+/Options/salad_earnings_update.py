@@ -16,7 +16,7 @@ def get_history(cookie, headers, file_handler):
 
     with open('./data.json', 'w+') as f:
         f.write(json.dumps(history))
-    print(f'{Fore.RED}Downloading data please wait...')
+    print(f'{Fore.CYAN}Downloading data please wait...')
     time.sleep(2)
 
     os.system(

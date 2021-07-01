@@ -14,16 +14,16 @@ def show_experience(logo, cookie, headers, file_handler):
                                                  cookie, headers, file_handler)
         experience = experience.json()
 
-        print(Fore.GREEN + logo)
+        print(Fore.LIGHTBLACK_EX + logo)
 
-        print(f'{Fore.LIGHTRED_EX}Experience {Fore.BLUE}> {Fore.YELLOW}' +
+        print(f'{Fore.CYAN}Experience {Fore.BLUE}> {Fore.RED}' +
               str(experience['lifetimeXp']) + ' XP')
-        print(Fore.GREEN)
+        print(Fore.LIGHTBLACK_EX)
         print('-------------------------------------')
 
         try:
             print(
-                f'\n{Fore.GREEN}Press {Fore.RED}ctrl+c {Fore.GREEN}to Return to the menu!')
+                f'\n{Fore.LIGHTBLACK_EX}Press {Fore.CYAN}ctrl+c {Fore.LIGHTBLACK_EX}to Return to the menu!')
             sleep(5)
         except (KeyboardInterrupt):
             return False

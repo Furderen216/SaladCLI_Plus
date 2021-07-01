@@ -1,8 +1,19 @@
-﻿import requests
-from colorama import Fore
-import json
+﻿import json
 import logging
 from time import sleep
+import os
+
+try:
+    from time import sleep
+    from colorama import Fore, Back
+    import pyperclip
+    import requests
+    import dateutil.parser
+except ImportError:
+    print("One or more Modules not found. Press enter to install! After installing please restart Salad CLI+")
+    input()
+    os.system("pip install -r ./Options/requirements.txt")
+    exit()
 
 
 def get_auth_key():
@@ -29,25 +40,25 @@ def authenticate(url, cookie, headers, file_handler):
 
     except requests.exceptions.HTTPError as errh:
         logger.error("Http Error:" + str(errh))
-        print(f'{Fore.RED}AN ERROR OCCURRED DURING THE REQUEST FOR AUTHENTICATION!')
+        print(f'{Fore.CYAN}AN ERROR OCCURRED DURING THE REQUEST FOR AUTHENTICATION!')
         if saladuser.status_code == 401:
-            print(f'{Fore.RED}REPLACE YOUR SALAD AUTH CODE!')
+            print(f'{Fore.CYAN}REPLACE YOUR SALAD AUTH CODE!')
             logger.error("REPLACE YOUR SALAD AUTH CODE!")
         sleep(20)
 
     except requests.exceptions.ConnectionError as errc:
         logger.error("Error Connecting:" + str(errc))
-        print(f'{Fore.RED}CHECK YOUR INTERNET CONNECTION!')
+        print(f'{Fore.CYAN}CHECK YOUR INTERNET CONNECTION!')
         sleep(20)
 
     except requests.exceptions.Timeout as errt:
         logger.error("Timeout Error:", str(errt))
-        print(f'{Fore.RED}TIMEOUT ERROR!')
+        print(f'{Fore.CYAN}TIMEOUT ERROR!')
         sleep(20)
 
     except requests.exceptions.RequestException as err:
         logger.error("Oops: Something Else:" + str(err))
-        print(f'{Fore.RED}AN ERROR OCCURRED DURING THE REQUEST FOR AUTHENTICATION!')
+        print(f'{Fore.CYAN}AN ERROR OCCURRED DURING THE REQUEST FOR AUTHENTICATION!')
         sleep(20)
 
     return saladuser
