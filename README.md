@@ -126,6 +126,11 @@
 ###### The Setup.bat immediately closes after launching / Gives an error.
 - Make sure you installed python to PATH. https://datatofish.com/add-python-to-windows-path/
 
+###### Delete Anti die features.
+- Open Registry or regedit.
+- Search "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers"
+- Remove DWORD "TdrDelay" and "TdrDdiDelay"
+
 
 ###### Other issues / Bugs.
 - Join the [Support Discord Server](https://discord.gg/D2VBbJDz8c)
