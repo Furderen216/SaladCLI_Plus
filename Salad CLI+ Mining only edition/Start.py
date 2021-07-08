@@ -191,7 +191,7 @@ if pool == 2:
     if region == 3:
         region = "us1"
 
-    if region == 5:
+    if region == 4:
         sys.exit()
 
     # Additional miner commands
