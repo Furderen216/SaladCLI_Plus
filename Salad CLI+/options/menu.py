@@ -20,8 +20,12 @@ def menu(saladuser, loginscreen, logo, cookie, headers, file_handler):
 
     # Input Selection
 
+<<<<<<< HEAD
+    print(f"{Fore.CYAN}Select an option: {Fore.RED}")
+=======
     select = input(
         f"{Fore.CYAN}Select an option: {Fore.RED}\n\n{Fore.RED}1 - {Fore.WHITE}Start Mining \n{Fore.RED}2 - {Fore.WHITE}Show Balance \n{Fore.RED}3 - {Fore.WHITE}Show Lifetime Balance \n{Fore.RED}4 - {Fore.WHITE}Show XP \n{Fore.RED}5 - {Fore.WHITE}Show Earning Graph \n{Fore.RED}6 - {Fore.WHITE}Copy Referral Code \n{Fore.RED}7 - {Fore.WHITE}Open Salad Store \n{Fore.RED}8 - {Fore.WHITE}Help{Fore.LIGHTBLACK_EX} \n{Fore.RED}x - {Fore.WHITE}Exit\n\n{Fore.LIGHTBLACK_EX}Select {Fore.BLUE}>> {Fore.LIGHTBLACK_EX}")
+>>>>>>> parent of 75ba50d (Pushed to V9)
 
     if select == "1":
         from options import mining
