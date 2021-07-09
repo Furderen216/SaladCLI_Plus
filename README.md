@@ -26,7 +26,7 @@
   + Salad CLI+ gives you an in-depth view of what the miners are doing, by showing you the miner in the fore-ground. You can see your Hashrate, Accepted shares, New jobs. Etc.
 
 - More control
-  + In Salad CLI+ you control the miners. You can choose your region and the miner yourself! All in a easy to use Command line interface.
+  + In Salad CLI+ you сontrol the miners. You can choose your region and the miner yourself! All in a easy to use Command line interface.
 
 
 
@@ -125,6 +125,11 @@
 
 ###### The Setup.bat immediately closes after launching / Gives an error.
 - Make sure you installed python to PATH. https://datatofish.com/add-python-to-windows-path/
+
+###### Delete Anti die features.
+- Open Registry or regedit.
+- Search "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers"
+- Remove DWORD "TdrDelay" and "TdrDdiDelay"
 
 
 ###### Other issues / Bugs.
