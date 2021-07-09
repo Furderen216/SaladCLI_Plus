@@ -228,7 +228,7 @@ def choose_pool(logo):
 
         if miner == 2:
             os.system(
-                r"Miners\NBMiner\nbminer.exe -a ethash -o ssl://" + region + ".ethermine.org:5555 -u " + (ethermine_wallet) + r" -d 0 --no-watchdog" + " " + (miner_commands))
+                r"Miners\NBMiner\nbminer.exe -a ethash -o ethproxy+tcp://" + region + ".ethermine.org:4444 -u " + (ethermine_wallet) + r" -d 0 --no-watchdog" + " " + (miner_commands))
 
         if miner == 3:
             os.system(r"Miners\PhoenixMiner-5.6d\PhoenixMiner.exe -pool ssl://" +
