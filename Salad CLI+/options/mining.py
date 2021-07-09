@@ -221,7 +221,7 @@ def choose_pool(logo):
         if region == 3:
             region = "us1"
 
-        if region == 4:
+        if region == 5:
             return False
 
         # Additional miner commands
@@ -277,8 +277,7 @@ def choose_pool(logo):
 
         if miner == 2:
             os.system(
-                r"Miners\NBMiner\nbminer.exe -a ethash -o ethproxy+tcp://" + 
-                      region + ".ethermine.org:4444 -u " + (ethermine_wallet) + r" -d 0 --no-watchdog" + " " + (miner_commands))
+                r"Miners\NBMiner\nbminer.exe -a ethash -o ssl://" + region + ".ethermine.org:5555 -u " + (ethermine_wallet) + r" -d 0 --no-watchdog" + " " + (miner_commands))
 
 <<<<<<< HEAD:Salad CLI+/options/mining.py
         if select == "3":
