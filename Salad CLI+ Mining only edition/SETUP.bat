@@ -1,1 +1,0 @@
-pip install -r ./essentials/requirements.txt
