@@ -2,5 +2,8 @@ python-dateutil==2.8.1
 requests==2.25.1
 pyperclip==1.8.2
 colorama==0.4.4
+<<<<<<< HEAD
 pywin32==228
 keyboard==0.13.5
+=======
+>>>>>>> parent of 75ba50d (Pushed to V9)
