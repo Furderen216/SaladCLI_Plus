@@ -82,10 +82,6 @@ if pool == 1:
     os.system("cls")
     print(Fore.LIGHTBLACK_EX + logo)
 
-    with open('config.json') as f:
-        js = json.load(f)
-    nicehash_wallet = js['nicehash_wallet']
-
     print(f"{Fore.RED}Miners are listed from 'best' to 'worst'.")
 
     print(f'{Fore.BLACK}{Back.CYAN}Cyan{Back.BLACK}{Fore.RED} = GPU Miner')
@@ -208,10 +204,6 @@ if pool == 2:
     os.system("cls")
     print(Fore.LIGHTBLACK_EX + logo)
 
-    with open('config.json') as f:
-        js = json.load(f)
-    ethermine_wallet = js['ethermine_wallet']
-
     print(f"{Fore.RED}Miners are listed from 'best' to 'worst'.")
 
     print(f'{Fore.CYAN}Select a miner:{Style.RESET_ALL}')
@@ -238,8 +230,8 @@ if pool == 2:
                   region + ".ethermine.org:5555 --user " + (ethermine_wallet) + " " + (miner_commands))
 
     if miner == 2:
-            os.system(r"Miners\NBMiner\nbminer.exe -a ethash -o ethproxy+tcp://" + 
-                  region + ".ethermine.org:4444 -u " + (ethermine_wallet) + r" -d 0 --no-watchdog" + " " + (miner_commands))
+        os.system(
+            r"Miners\NBMiner\nbminer.exe -a ethash -o stratum+ssl://" + region + ".ethermine.org:5555 -u " + (ethermine_wallet) + r" -d 0 --no-watchdog" + " " + (miner_commands))
 
     if miner == 3:
         os.system(r"Miners\PhoenixMiner-5.6d\PhoenixMiner.exe -pool ssl://" +
