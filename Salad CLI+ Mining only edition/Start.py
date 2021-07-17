@@ -241,7 +241,7 @@ if pool == 2:
             r"Miners\Teamredminer\teamredminer.exe -a ethash -o stratum+ssl://" + region + ".ethermine.org:5555 -u " + (ethermine_wallet) + " " + (miner_commands))
 
     if miner == 5:
-        os.system(r"Miners\ETHMiner\ethminer.exe -P ssl://" +
+        os.system(r"Miners\ETHMiner\ethminer.exe -P stratum1+ssl://" +
                   (ethermine_wallet) + r"@" + region + ".ethermine.org:5555" + " " + (miner_commands))
 
     if miner == 6:
