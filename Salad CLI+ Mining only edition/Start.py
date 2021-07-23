@@ -10,9 +10,9 @@ try:
     from colorama import Fore, Back, Style
 
 except ImportError:
-    print("One or more Modules not found. Press enter to install! After installing please restart Salad CLI+")
-    input()
+    print("Installing important software, please wait...")
     os.system("pip install -r ./essentials/requirements.txt")
+    os.system("python Start.py")
     exit()
 
 art = open('./essentials/art.txt', 'r')
