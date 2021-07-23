@@ -7,7 +7,7 @@ from colorama import Fore
 from options import authentication
 
 
-def get_history(cookie, headers, file_handler):
+def get_history(logo, cookie, headers, file_handler):
     sys.stdout.write("\x1b]2;Downloading History\x07")
 
     history = authentication.authenticate('https://app-api.salad.io/api/v2/reports/1-day-earning-history',
@@ -16,7 +16,9 @@ def get_history(cookie, headers, file_handler):
 
     with open('./data.json', 'w+') as f:
         f.write(json.dumps(history))
-    print(f'{Fore.CYAN}Downloading data please wait...')
+    os.system('cls')
+    print(Fore.LIGHTBLACK_EX + logo)
+    print(f'{Fore.CYAN}Downloading your earning history...')
     time.sleep(2)
 
     os.system(

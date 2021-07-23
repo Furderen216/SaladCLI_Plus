@@ -22,7 +22,7 @@ logo = art.read()
 
 os.system('cls')
 
-sys.stdout.write("\x1b]2;Choose mining region.\x07")
+sys.stdout.write("\x1b]2;Configure your miner.\x07")
 
 print(Fore.LIGHTBLACK_EX + logo)
 
@@ -163,7 +163,7 @@ if pool == 2:
     # Select Region
     os.system('cls')
 
-    sys.stdout.write("\x1b]2;Choose mining region.\x07")
+    sys.stdout.write("\x1b]2;Configure your miner.\x07")
 
     print(Fore.LIGHTBLACK_EX + logo)
 
