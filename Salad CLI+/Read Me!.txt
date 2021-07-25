@@ -16,7 +16,7 @@ Installing And Configuring
 _________________________________________________________________________________________________________________________________________
 
 Install Python - 1 -
-Getting the Auth Token - 2 (Skip this step if you have the mining only version)
+Getting the Auth and sIdRefresh Token - 2 (Skip this step if you have the mining only version)
 Getting your wallets - 3
 Installing depencies - 4
 Generating the Config.JSON file - 5
@@ -61,8 +61,11 @@ Login with your Salad account.
 Click on the Cookies icon (Should look like an lock on firefox) on the left side of the Search bar.
 Click on "Cookies".
 Open the app-api.salad.io folder in the cookies.
-Open Salad.Authentication.
-Right-Click on the Content in the Salad.Authentication cookie, and click Select-all.
+Open sAccessToken.
+Right-Click on the Content in the sAccessToken cookie, and click Select-all.
+Right-Click and click Copy.
+Open sIdRefreshToken.
+Right-Click on the Content in the sIdRefreshToken cookie, and click Select-all.
 Right-Click and click Copy.
 
 _________________________________________________________________________________________________________________________________________   
@@ -101,7 +104,7 @@ $$$$$$$$ |
                                                                                     
 _________________________________________________________________________________________________________________________________________
 
-Run SETUP.bat and install the depencies automatically!
+Run SETUP.bat and install the dependencies automatically!
 
 _________________________________________________________________________________________________________________________________________
 
