@@ -43,8 +43,8 @@ def authenticate(url, cookie, headers, file_handler):
         logger.error("Http Error:" + str(errh))
         print(f'{Fore.CYAN}AN ERROR OCCURRED DURING THE REQUEST FOR AUTHENTICATION!')
         if saladuser.status_code == 401:
-            print(f'{Fore.CYAN}REPLACE YOUR SALAD AUTH CODE!')
-            logger.error("REPLACE YOUR SALAD AUTH CODE!")
+            print(f'{Fore.CYAN}REPLACE YOUR SALAD AUTH CODE OR SIDREFRESHTOKEN!')
+            logger.error("REPLACE YOUR SALAD AUTH CODE OR SIDREFRESHTOKEN!")
         sleep(20)
 
     except requests.exceptions.ConnectionError as errc:
