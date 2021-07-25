@@ -29,9 +29,14 @@ def main():
     saladuser = authentication.authenticate('https://app-api.salad.io/api/v1/profile',
                                             cookie, headers, file_handler)
     saladuser = saladuser.json()
+    
+    # Get Session
+    session = authentication.authenticate('https://app-api.salad.io/api/v2/seasons/current',
+                                            cookie, headers, file_handler)
+    session = session.json()
 
     # Open menu
-    menu.menu(saladuser, loginscreen, logo, cookie, headers, file_handler)
+    menu.menu(saladuser, session, loginscreen, logo, cookie, headers, file_handler)
 
 
 if __name__ == "__main__":
