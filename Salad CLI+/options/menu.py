@@ -11,16 +11,21 @@ window = win32gui.GetForegroundWindow()
 
 
 def menu(saladuser, loginscreen, logo, cookie, headers, file_handler):
-
+  
     os.system('cls')
     sys.stdout.write("\x1b]2;Salad CLI+ | By Walkx\x07")
     print(Fore.LIGHTBLACK_EX + loginscreen)
+    print(f'{Fore.RED}[----------- Profile -----------]\n')
     print(f'{Fore.CYAN}Username {Fore.BLUE}> {Fore.RED}' +
           str(saladuser['username']))
     print(f'{Fore.CYAN}Email {Fore.BLUE}> {Fore.RED}' +
           str(saladuser['email']))
-    print(f'{Fore.CYAN}User id {Fore.BLUE}> {Fore.RED}' +
-          str(saladuser['id']))
+    print(f'{Fore.RED}[----------- Session -----------]\n')
+    print(f'{Fore.CYAN}Current Session {Fore.BLUE}> {Fore.RED}' +
+          str(session['name']))
+    print(f'{Fore.CYAN}Current level {Fore.BLUE}> {Fore.RED}' +
+          str(session['currentLevelId']))
+    print(f'{Fore.CYAN}You need {Fore.BLUE}> ' + Fore.RED + str(session['totalXp'] - session['levelXp']) + Fore.BLUE +' < ' + Fore.CYAN + 'minutes left until level up')
     print("\n\n")
 
     # Input Selection

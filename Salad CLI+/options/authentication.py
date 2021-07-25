@@ -26,7 +26,8 @@ def get_auth_key():
         print(f'{Fore.RED}It looks like your config.json file is incorrectly configured.\n{Fore.CYAN}Your Salad token is missing.')
         exit()
     salad_auth = js['salad_key']
-    cookie = {"Salad.Authentication": salad_auth}
+    RefreshToken = js['sIdRefreshToken']
+    cookie = {"sAccessToken": salad_auth, "sIdRefreshToken": sIdRefreshToken}
     headers = {
         "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Salad/0.5.3 Chrome/78.0.3904.130 Electron/7.1.9 Safari/537.36'
     }
@@ -49,7 +50,7 @@ def authenticate(url, cookie, headers, file_handler):
         print(Fore.LIGHTBLACK_EX + logo)
         print(f'{Fore.RED}Connection error! D:')
         if saladuser.status_code == 401:
-            print(f'{Fore.WHITE}Your Salad Auth code is incorrect. Please update it.')
+            print(f'{Fore.WHITE}Your Salad Auth code or Refresh Token is incorrect. Please update it.')
             logger.error("REPLACE YOUR SALAD AUTH CODE!")
         exit()
 
