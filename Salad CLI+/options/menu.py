@@ -22,7 +22,7 @@ def menu(saladuser, loginscreen, logo, cookie, headers, file_handler):
           str(session['name']))
     print(f'{Fore.CYAN}Current level {Fore.BLUE}> {Fore.RED}' +
           str(session['currentLevelId']))
-    print(f'{Fore.CYAN}You need {Fore.BLUE}> ' + Fore.RED + str(session['totalXp'] - session['levelXp']) + Fore.BLUE +' < ' + Fore.CYAN + 'to level up')
+    print(f'{Fore.CYAN}You need {Fore.BLUE}> ' + Fore.RED + str(session['totalXp'] - session['levelXp']) + Fore.BLUE +' < ' + Fore.CYAN + 'minutes to level up')
     print("\n\n")
 
     # Input Selection
