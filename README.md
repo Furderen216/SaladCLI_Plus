@@ -1,3 +1,5 @@
+# Salad recently updated their login service, use the Mining only edition. The normal version of CLI+ is currently broken.
+
 ![](https://media.discordapp.net/attachments/844185675489607690/845581142701637672/Logo.png)
 
 <!-- Badges -->
