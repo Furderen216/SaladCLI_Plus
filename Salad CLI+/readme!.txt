@@ -67,6 +67,24 @@ ________________________________________________________________________________
     7 Right-Click on the Content in the sAccessToken cookie, and click Select-all.
     8 Right-Click and click Copy.
 
+  How to find your Refresh token? (For Chrome/Chromium)
+    1 Go to app.salad.io
+    2 Login with your salad account
+    3 Click the 3 dots at the right most corner
+    4 Go to More Tools and then to Developer Tools there.
+    5 Open Developer Tools and go to "Application Tab"
+    6 Copy the sIdRefreshToken from there.
+ 
+   How to find your Refresh token? (For Firefox)
+    1 Go to app.salad.io
+    2 Login with your Salad account.
+    3 Click on the Cookies icon (Its the padlock) on the left side of the Search bar.
+    4 Click on "Cookies".
+    5 Open the app-api.salad.io folder in the cookies.
+    6 Open Salad.Authentication.
+    7 Right-Click on the Content in the sIdRefreshToken cookie, and click Select-all.
+    8 Right-Click and click Copy.
+
   How to find your Access token? (For Chrome/Chromium)
     1 Go to app.salad.io
     2 Login with your salad account
