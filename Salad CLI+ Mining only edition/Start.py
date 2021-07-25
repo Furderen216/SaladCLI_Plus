@@ -25,6 +25,10 @@ os.system('cls')
 sys.stdout.write("\x1b]2;Configure your miner.\x07")
 
 print(Fore.LIGHTBLACK_EX + logo)
+if not os.path.exists("./config.json"):
+    print(f'{Fore.RED}It looks like you don\'t have a config.json file.\n{Fore.WHITE}Please read the Read Me!.txt file for more information.')
+    os.system("notepad Read Me!.txt")
+    exit()
 
 # pool
 
