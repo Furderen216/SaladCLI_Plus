@@ -78,7 +78,6 @@
 3. Fill in your AUTH code, Wallet(s) and RigID like  shown.
 4. Click the "Download" button to download your config.json.
 5. Put the config.json file in the Salad CLI+ folder.
-6. Open config.json file in notepad.
 
 
 ---
