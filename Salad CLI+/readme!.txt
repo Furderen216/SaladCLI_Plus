@@ -1,6 +1,8 @@
 If you are reading this in Notepad or some other text editor and the following text does not show
 up correctly please make the window kinda bigger so it looks better.
 
+For a Better (and more up to date usually) online guide go to https://github.com/WalkxCode/SaladCLI_Plus#how-to-install-salad-cli
+
 _____________________________________________________________________________________________________
 
                    d8b                 d8b             d8b   d8,               d8b                  
