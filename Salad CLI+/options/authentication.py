@@ -23,7 +23,11 @@ def get_auth_key():
         js = json.load(f)
     if 'salad_key' not in js:
         print(Fore.LIGHTBLACK_EX + logo)
-        print(f'{Fore.RED}It looks like your config.json file is incorrectly configured.\n{Fore.CYAN}Your Salad token is missing.')
+        print(f'{Fore.RED}It looks like your config.json file is incorrectly configured.\n{Fore.CYAN}Your Salad Auth token is missing.')
+        exit()
+    if 'sIdRefreshToken' not in js:
+        print(Fore.LIGHTBLACK_EX + logo)
+        print(f'{Fore.RED}It looks like your config.json file is incorrectly configured.\n{Fore.CYAN}Your Salad Refresh token is missing.')
         exit()
     salad_auth = js['salad_key']
     RefreshToken = js['sIdRefreshToken']
