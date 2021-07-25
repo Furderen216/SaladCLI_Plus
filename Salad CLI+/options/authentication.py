@@ -10,9 +10,9 @@ try:
     import requests
     import dateutil.parser
 except ImportError:
-    print("Installing important software, please wait...")
+    print("One or more Modules not found. Press enter to install! After installing please restart Salad CLI+")
+    input()
     os.system("pip install -r ./Options/requirements.txt")
-    os.system("python Start.py")
     exit()
 
 
