@@ -1,5 +1,3 @@
-# Salad recently updated their login service, use the Mining only edition. The normal version of CLI+ is currently broken.
-
 ![](https://media.discordapp.net/attachments/844185675489607690/845581142701637672/Logo.png)
 
 <!-- Badges -->
@@ -50,15 +48,18 @@
 
 #### Configuring
 
-###### How to find your AUTH code? (Skip this step if you're using the Mining only edition.)
+###### How to find your AUTH code and RefreshToken? (Skip this step if you're using the Mining only edition.)
 1. Go to app.salad.io
 2. Login with your Salad account.
 3. Click on the Cookies icon ![](https://images-ext-2.discordapp.net/external/307zW6hU-4O2g0TaCN3VXR29D-byDrPOxcvtV7k5fTs/https/i.imgur.com/rCpRXdW.png) on the left side of the Search bar.
 4. Click on "Cookies".
 5. Open the `app-api.salad.io` folder in the cookies.
-6. Open `Salad.Authentication`.
-7. **Right-Click** on the **Content** in the `Salad.Authentication` cookie, and click **Select-all**.
+6. Open `sAccessToken`.
+7. **Right-Click** on the **Content** in the `sAccessToken` cookie, and click **Select-all**.
 8. **Right-Click** and click **Copy**.
+9. Open 'sldRefeshToken'.
+10. **Right-Click** on the **Content** in the `sldRefreshToken` cookie, and click **Select-all**.
+11. **Right-Click** and click **Copy**.
 
 ###### How to find your wallets?
 1. Completely close Salad. (Make sure to close it from the taskbar too.)
