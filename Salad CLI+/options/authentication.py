@@ -30,7 +30,7 @@ def get_auth_key():
         print(f'{Fore.RED}It looks like your config.json file is incorrectly configured.\n{Fore.CYAN}Your Salad Refresh token is missing.')
         exit()
     salad_auth = js['salad_key']
-    RefreshToken = js['sIdRefreshToken']
+    sIdRefreshToken = js['sIdRefreshToken']
     cookie = {"sAccessToken": salad_auth, "sIdRefreshToken": sIdRefreshToken}
     headers = {
         "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Salad/0.5.3 Chrome/78.0.3904.130 Electron/7.1.9 Safari/537.36'
