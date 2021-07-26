@@ -1,7 +1,9 @@
 ﻿import json
 import logging
 from time import sleep
+from art import art
 import os
+logo = art.read_art('./art/art.txt')
 
 try:
     from time import sleep
@@ -10,15 +12,23 @@ try:
     import requests
     import dateutil.parser
 except ImportError:
-    print("One or more Modules not found. Press enter to install! After installing please restart Salad CLI+")
-    input()
+    print("Installing important software, please wait...")
     os.system("pip install -r ./Options/requirements.txt")
+    os.system("python Start.py")
     exit()
 
 
 def get_auth_key():
     with open('./config.json') as f:
         js = json.load(f)
+    if 'salad_key' not in js:
+        print(Fore.LIGHTBLACK_EX + logo)
+        print(f'{Fore.RED}It looks like your config.json file is incorrectly configured.\n{Fore.CYAN}Your Salad Auth token is missing.')
+        exit()
+    if 'sIdRefreshToken' not in js:
+        print(Fore.LIGHTBLACK_EX + logo)
+        print(f'{Fore.RED}It looks like your config.json file is incorrectly configured.\n{Fore.CYAN}Your Salad Refresh token is missing.')
+        exit()
     salad_auth = js['salad_key']
     RefreshToken = js['sIdRefreshToken']
     cookie = {"sAccessToken": salad_auth, "sIdRefreshToken": sIdRefreshToken}
@@ -41,25 +51,29 @@ def authenticate(url, cookie, headers, file_handler):
 
     except requests.exceptions.HTTPError as errh:
         logger.error("Http Error:" + str(errh))
-        print(f'{Fore.CYAN}AN ERROR OCCURRED DURING THE REQUEST FOR AUTHENTICATION!')
+        print(Fore.LIGHTBLACK_EX + logo)
+        print(f'{Fore.RED}Connection error! D:')
         if saladuser.status_code == 401:
-            print(f'{Fore.CYAN}REPLACE YOUR SALAD AUTH CODE OR SIDREFRESHTOKEN!')
-            logger.error("REPLACE YOUR SALAD AUTH CODE OR SIDREFRESHTOKEN!")
-        sleep(20)
+            print(f'{Fore.WHITE}Your Salad Auth code or Refresh Token is incorrect. Please update it.')
+            logger.error("REPLACE YOUR SALAD AUTH CODE!")
+        exit()
 
     except requests.exceptions.ConnectionError as errc:
         logger.error("Error Connecting:" + str(errc))
-        print(f'{Fore.CYAN}CHECK YOUR INTERNET CONNECTION!')
-        sleep(20)
+        print(Fore.LIGHTBLACK_EX + logo)
+        print(f'{Fore.RED}Connection error! D:\n{Fore.WHITE}You appear to be offline. Check your internet connection.')
+        exit()
 
     except requests.exceptions.Timeout as errt:
         logger.error("Timeout Error:", str(errt))
-        print(f'{Fore.CYAN}TIMEOUT ERROR!')
-        sleep(20)
+        print(Fore.LIGHTBLACK_EX + logo)
+        print(f'{Fore.RED}Connection error! D:\n{Fore.WHITE}The Salad servers didn\'t respond. Please try again later.')
+        exit()
 
     except requests.exceptions.RequestException as err:
         logger.error("Oops: Something Else:" + str(err))
-        print(f'{Fore.CYAN}AN ERROR OCCURRED DURING THE REQUEST FOR AUTHENTICATION!')
-        sleep(20)
+        print(Fore.LIGHTBLACK_EX + logo)
+        print(f'{Fore.RED}Connection error! D:\n{Fore.WHITE}Unfortunately, we\'re having trouble connecting to the Salad servers.\nInformation for CLI+ developers: {str(err)}\nPlease try again later.')
+        exit()
 
     return saladuser

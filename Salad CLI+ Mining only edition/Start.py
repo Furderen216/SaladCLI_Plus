@@ -10,9 +10,9 @@ try:
     from colorama import Fore, Back, Style
 
 except ImportError:
-    print("One or more Modules not found. Press enter to install! After installing please restart Salad CLI+")
-    input()
+    print("Installing important software, please wait...")
     os.system("pip install -r ./essentials/requirements.txt")
+    os.system("python Start.py")
     exit()
 
 art = open('./essentials/art.txt', 'r')
@@ -22,9 +22,13 @@ logo = art.read()
 
 os.system('cls')
 
-sys.stdout.write("\x1b]2;Choose mining region.\x07")
+sys.stdout.write("\x1b]2;Configure your miner.\x07")
 
 print(Fore.LIGHTBLACK_EX + logo)
+if not os.path.exists("./config.json"):
+    print(f'{Fore.RED}It looks like you don\'t have a config.json file.\n{Fore.WHITE}Please read the Read Me!.txt file for more information.')
+    os.system("notepad Read Me!.txt")
+    exit()
 
 # pool
 
@@ -163,7 +167,7 @@ if pool == 2:
     # Select Region
     os.system('cls')
 
-    sys.stdout.write("\x1b]2;Choose mining region.\x07")
+    sys.stdout.write("\x1b]2;Configure your miner.\x07")
 
     print(Fore.LIGHTBLACK_EX + logo)
 

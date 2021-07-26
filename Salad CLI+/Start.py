@@ -3,6 +3,7 @@ import os
 import logging
 from options import authentication, menu
 from art import art
+from colorama import Fore
 
 
 def main():
@@ -23,8 +24,13 @@ def main():
     # Clear screen
     os.system('cls')
     sys.stdout.write("\x1b]2;Salad CLI+ | By Walkx\x07")
+    if not os.path.exists("./config.json"):
+        print(Fore.LIGHTBLACK_EX + logo)
+        print(f'{Fore.RED}It looks like you don\'t have a config.json file.\n{Fore.WHITE}Please read the Read Me!.txt file for more information.')
+        os.system("notepad Read Me!.txt")
+        exit()
 
-    # Get Auth
+    # Get Auth 
     cookie, headers = authentication.get_auth_key()
     saladuser = authentication.authenticate('https://app-api.salad.io/api/v1/profile',
                                             cookie, headers, file_handler)

@@ -176,7 +176,7 @@ if not goose:
     print(f'{Fore.CYAN}Total Earned Today {Fore.BLUE}> {Fore.RED}$' + str(total))
     print(Fore.LIGHTBLACK_EX)
     print('-------------------------------------')
-    print(f'\n{Fore.LIGHTBLACK_EX}Press {Fore.CYAN}ctrl+c {Fore.LIGHTBLACK_EX}to Return to the menu!')
+    print(f'\n{Fore.LIGHTBLACK_EX}Press {Fore.CYAN}CTRL+C {Fore.LIGHTBLACK_EX}to return to the menu!')
 
 else:
 
@@ -294,7 +294,7 @@ else:
             print(text)
     print(Fore.LIGHTBLACK_EX)
     print('-------------------------------------')
-    print(f'\n{Fore.LIGHTBLACK_EX}Press {Fore.CYAN}ctrl+c {Fore.LIGHTBLACK_EX}to Return to the menu!')
+    print(f'\n{Fore.LIGHTBLACK_EX}Press {Fore.CYAN}CTRL+C {Fore.LIGHTBLACK_EX}to return to the menu!')
 
 while True:
     try:

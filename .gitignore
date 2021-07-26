@@ -1,6 +1,5 @@
-"Salad CLI+/data.json"
-"Salad CLI+/config.json"
-data.json
+Salad CLI+/data.json
+Salad CLI+/config.json
 .idea/inspectionProfiles/profiles_settings.xml
 .idea/inspectionProfiles/Project_Default.xml
 .idea/misc.xml
@@ -8,3 +7,5 @@ data.json
 .idea/modules.xml
 .idea/vcs.xml
 .idea/workspace.xml
+__pycache__
+logs.log

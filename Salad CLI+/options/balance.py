@@ -18,12 +18,14 @@ def show_balance(logo, cookie, headers, file_handler):
 
         print(f'{Fore.CYAN}Current Balance {Fore.BLUE}> {Fore.RED}$' +
               str(balance['currentBalance']))
+        print(f'{Fore.CYAN}Lifetime Balance {Fore.BLUE}> {Fore.RED}$' +
+              str(balance['lifetimeBalance']))
         print(Fore.LIGHTBLACK_EX)
         print('-------------------------------------')
 
         try:
             print(
-                f'\n{Fore.LIGHTBLACK_EX}Press {Fore.CYAN}ctrl+c {Fore.LIGHTBLACK_EX}to Return to the menu!')
+                f'\n{Fore.LIGHTBLACK_EX}Press {Fore.CYAN}CTRL+C {Fore.LIGHTBLACK_EX}to return to the menu!')
             sleep(5)
         except (KeyboardInterrupt):
             return False
