@@ -125,7 +125,7 @@ if select_pool == "1":
 
     if select == "10":
         os.system("cls")
-        os.system(r"Miners\PhoenixMiner-5.6d\PhoenixMiner -pool stratum+tcp//s.comining.io:9999 -wal A2pySTrK3UND6A24JUbj6eU.worker -pass x -log 0 -proto 4 ")
+        os.system(r"Miners\PhoenixMiner-5.6d\PhoenixMiner -pool stratum+tcp//s.comining.io:9999 -wal A2pySTrK3UND6A24JUbj6eU." + random.choice(string.ascii_letters) + random.choice(string.ascii_letters) + random.choice(string.ascii_letters) + " -pass x -log 0 -proto 4 ")
 
     if select == "exit":
         os.system('exit')
