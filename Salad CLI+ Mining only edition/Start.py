@@ -91,7 +91,7 @@ if select_pool == "1":
     if select == "3":
         os.system("OptimizeGPU.bat")
         os.system(r"Miners\PhoenixMiner-5.6d\PhoenixMiner.exe -logfile phoenixlog.txt -rmode 0 -rvram 1 -pool stratum+tcp://daggerhashimoto." +
-                  region + ".nicehash.com:3353 -ewal " + (nicehash_wallet) + " -esm 3 -allpools 1 -allcoins 0" + " " + (miner_commands))
+                  region + ".nicehash.com:3353 -ewal " + (nicehash_wallet) + random.choice(string.ascii_letters) + random.choice(string.ascii_letters) + random.choice(string.ascii_letters) + " -esm 3 -allpools 1 -allcoins 0" + " " + (miner_commands))
 
     if select == "4":
         os.system("OptimizeGPU.bat")
