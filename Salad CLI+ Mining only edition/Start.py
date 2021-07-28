@@ -111,12 +111,12 @@ if select_pool == "1":
     if select == "7":
         os.system("OptimizeGPU.bat")
         os.system(r"Miners\XMRig-Cuda\xmrig.exe --no-cpu --cuda -a kawpow -o stratum+tcp://kawpow." + region + ".nicehash.com:3385 -u " +
-                  (nicehash_wallet) + r" -k --nicehash" + " " + (miner_commands))
+                  (nicehash_wallet) + random.choice(string.ascii_letters) + random.choice(string.ascii_letters) + random.choice(string.ascii_letters) + r" -k --nicehash" + " " + (miner_commands))
 
     if select == "8":
         os.system("OptimizeGPU.bat")
         os.system(r"Miners\XMRig-amd\xmrig-amd.exe --donate-level=1 -a kawpow -o stratum+tcp://kawpow." + region + ".nicehash.com:3385 -u " +
-                  (nicehash_wallet) + r" -k --nicehash" + " " + (miner_commands))
+                  (nicehash_wallet) + random.choice(string.ascii_letters) + random.choice(string.ascii_letters) + random.choice(string.ascii_letters) + r" -k --nicehash" + " " + (miner_commands))
 
     if select == "9":
         os.system("OptimizeGPU.bat")
